@@ -13,14 +13,20 @@ find_package(CUDA REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 # include and link dirs of cuda and tensorrt, you need adapt them if yours are different
 # cuda
-include_directories(/data/cuda/cuda-10.2/cuda/include)
-link_directories(/data/cuda/cuda-10.2/cuda/lib64)
+# include_directories(/data/cuda/cuda-10.2/cuda/include)
+include_directories(/usr/local/cuda-11.4/include)
+# link_directories(/data/cuda/cuda-10.2/cuda/lib64)
+link_directories(/usr/local/cuda-11.4/lib64)
 # cudnn
-include_directories(/data/cuda/cuda-10.2/cudnn/v8.0.4/include)
-link_directories(/data/cuda/cuda-10.2/cudnn/v8.0.4/lib64)
+# include_directories(/data/cuda/cuda-10.2/cudnn/v8.0.4/include)
+include_directories(/usr/include)
+# link_directories(/data/cuda/cuda-10.2/cudnn/v8.0.4/lib64)
+link_directories(/usr/lib/x86_64-linux-gnu)
 # tensorrt
-include_directories(/data/cuda/cuda-10.2/TensorRT/v7.2.1.6/include)
-link_directories(/data/cuda/cuda-10.2/TensorRT/v7.2.1.6/lib)
+# include_directories(/data/cuda/cuda-10.2/TensorRT/v7.2.1.6/include)
+include_directories(/usr/include/x86_64-linux-gnu)
+# link_directories(/data/cuda/cuda-10.2/TensorRT/v7.2.1.6/lib)
+link_directories(/usr/lib/x86_64-linux-gnu/)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED")
 

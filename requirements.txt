@@ -1,13 +1,16 @@
 # TODO: Update with exact module version
 numpy
 torch>=1.7
-opencv_python
+# opencv_python
+# opencv for server (headless) environments
+opencv_contrib_python_headless
 loguru
 tqdm
 torchvision
 thop
 ninja
 tabulate
+tensorboard
 
 # verified versions
 # pycocotools corresponds to https://github.com/ppwwyyxx/cocoapi
@@ -15,3 +18,12 @@ pycocotools>=2.0.2
 onnx==1.8.1
 onnxruntime==1.8.0
 onnx-simplifier==0.3.5
+
+
+
+# additional requiremets for tensorRT
+# --extra-index-url https://pypi.ngc.nvidia.com
+nvidia-pyindex
+nvidia-tensorrt
+git+https://github.com/NVIDIA-AI-IOT/torch2trt.git@master
+# git+https://github.com/gcunhase/torch2trt@master

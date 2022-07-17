@@ -219,3 +219,7 @@ events.out.tfevents*
 
 # vim
 .vim
+
+# compressed file
+*.zip
+*.tar
